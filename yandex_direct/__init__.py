@@ -1,1 +1,1 @@
-__all__ = ['ydbase', 'ydcmpg']
+__all__ = ['ydbase', 'ycmpg']
