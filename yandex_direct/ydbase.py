@@ -454,7 +454,8 @@ class YandexDirectBase:
                 if result.json()['error']['error_code'] == 1000 and \
                         result.json()['error']['error_string'] == "Сервис временно недоступен":
                     raise InternalYDServerError
-                raise YandexDirectError
+                else:
+                    raise YandexDirectError
             else:
                 logger.info(f"RequestId: {result.headers.get('RequestId', False)} "
                             f"Информация о баллах: {result.headers.get('Units', False)}")
