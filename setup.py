@@ -6,13 +6,13 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pysea-yandex-direct", # Replace with your own username
-    version="0.0.5",
+    version="0.0.6",
     author="Eugene Komissarov",
     author_email="ekom@cian.ru",
     description="Yandex Direct base",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://ekomissarov@bitbucket.org/ekomissarov/yandex_direct.git",
+    url="git@bitbucket.org:cianmedia/yandex_direct.git",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
