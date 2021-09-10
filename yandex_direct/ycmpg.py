@@ -44,6 +44,8 @@ class YCampaigns(ydbase.YandexDirectBase):
                             },
                             "FieldNames": ['Id', 'Name', 'State', 'DailyBudget'],
                             "TextCampaignFieldNames": ["BiddingStrategy", ],
+                            "DynamicTextCampaignFieldNames": ["BiddingStrategy", ],
+                            "SmartCampaignFieldNames": ["BiddingStrategy", ],
                             "Page": {"Limit": self.limit_by, "Offset": self.offset}
                            }
                 }
