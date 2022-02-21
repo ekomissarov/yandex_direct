@@ -112,7 +112,7 @@ class YGroups(ydbase.YandexDirectBase):
         self.data = self.__get_adgroups(campaign_ids)
 
     def __str__(self):
-        return f"<<Кампании Яндекс Директ {len(self.data)} для кампаний {self.campaign_ids}>>"
+        return f"<<Группы Яндекс Директ {len(self.data)} для кампаний {self.campaign_ids}>>"
 
     def __len__(self):
         return len(self.data)
