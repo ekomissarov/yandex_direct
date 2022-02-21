@@ -398,8 +398,9 @@ class YandexDirectBase:
         'Keywords': "https://api.direct.yandex.com/json/v5/keywords",
         'Reports': "https://api.direct.yandex.com/json/v5/reports",
         'Sitelinks': "https://api.direct.yandex.com/json/v5/sitelinks",
-        "AdImages": "https://api.direct.yandex.com/json/v5/adimages",
-        "v4live": "https://api.direct.yandex.ru/live/v4/json/",
+        'AdImages': "https://api.direct.yandex.com/json/v5/adimages",
+        'Dictionaries': "https://api.direct.yandex.com/json/v5/dictionaries",
+        'v4live': "https://api.direct.yandex.ru/live/v4/json/",
     }
 
     def __init__(self, directory="./", dump_file_prefix="fooooo", cache=True):
