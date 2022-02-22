@@ -435,6 +435,9 @@ class YandexDirectBase:
         mutate_method = f"{body['method'].capitalize()}Results"
         if body['method'] == "get":
             mutate_method = ""
+        elif body['method'] == "hasSearchVolume":
+            mutate_method = "HasSearchVolumeResults"
+
 
         # Кодирование тела запроса в JSON
         json_body = json.dumps(body, ensure_ascii=False).encode('utf8')
