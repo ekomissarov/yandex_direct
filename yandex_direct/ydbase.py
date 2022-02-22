@@ -396,6 +396,7 @@ class YandexDirectBase:
         'Campaigns': "https://api.direct.yandex.com/json/v5/campaigns",
         'KeywordBids': "https://api.direct.yandex.com/json/v5/keywordbids",
         'Keywords': "https://api.direct.yandex.com/json/v5/keywords",
+        'KeywordsResearch': "https://api.direct.yandex.com/json/v5/keywordsresearch",
         'Reports': "https://api.direct.yandex.com/json/v5/reports",
         'Sitelinks': "https://api.direct.yandex.com/json/v5/sitelinks",
         'AdImages': "https://api.direct.yandex.com/json/v5/adimages",
