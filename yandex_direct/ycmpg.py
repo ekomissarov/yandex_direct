@@ -40,7 +40,7 @@ class YCampaigns(ydbase.YandexDirectBase):
         body = {"method": 'get',
                 "params":  {
                             "SelectionCriteria": {
-                                "States": ['ON', 'SUSPENDED']
+                                "States": ['ON', 'SUSPENDED', 'ENDED']
                             },
                             "FieldNames": ['Id', 'Name', 'State', 'DailyBudget'],
                             "TextCampaignFieldNames": ["BiddingStrategy", ],

@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="pysea-yandex-direct", # Replace with your own username
-    version="0.0.12",
+    version="0.0.13",
     author="Eugene Komissarov",
     author_email="ekom@cian.ru",
     description="Yandex Direct base",
