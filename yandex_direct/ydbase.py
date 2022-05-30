@@ -401,6 +401,7 @@ class YandexDirectBase:
         'Sitelinks': "https://api.direct.yandex.com/json/v5/sitelinks",
         'AdImages': "https://api.direct.yandex.com/json/v5/adimages",
         'Dictionaries': "https://api.direct.yandex.com/json/v5/dictionaries",
+        'AdExtensions': "https://api.direct.yandex.com/json/v5/adextensions",
         'v4live': "https://api.direct.yandex.ru/live/v4/json/",
     }
 
