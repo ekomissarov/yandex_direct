@@ -406,9 +406,7 @@ class YandexDirectBase:
     }
 
     def __init__(self, directory="./", dump_file_prefix="fooooo", cache=True):
-        self.headers = {"Authorization": "Bearer " + ENVI['PYSEA_YD_TOKEN'],
-                   "Accept-Language": "ru",
-                   }
+        self.headers = {"Authorization": "Bearer " + ENVI['PYSEA_YD_TOKEN'], "Accept-Language": "ru",}
         # переменные настраивающие кеширование запросов к API
         self.directory = directory
         self.dump_file_prefix = dump_file_prefix
