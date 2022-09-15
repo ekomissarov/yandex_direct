@@ -46,6 +46,7 @@ class YCampaigns(ydbase.YandexDirectBase):
                             "TextCampaignFieldNames": ["BiddingStrategy", "PriorityGoals", ],
                             "DynamicTextCampaignFieldNames": ["BiddingStrategy", "PriorityGoals", ],
                             "SmartCampaignFieldNames": ["BiddingStrategy", "PriorityGoals", ],
+                            "CpmBannerCampaignFieldNames": ["BiddingStrategy"],
                             "Page": {"Limit": self.limit_by, "Offset": self.offset}
                            }
                 }
