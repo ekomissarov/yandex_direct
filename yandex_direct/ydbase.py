@@ -230,7 +230,10 @@ class TSVReport:
             # приведение типов для извесных полей
             for field in ['CampaignId', 'AdGroupId', 'CriteriaId', 'Impressions', 'Clicks', 'Cost']:
                 if line.get(field, False):
-                    line[field] = int(line[field])
+                    if line[field]=="--":
+                        line[field] = "undefined"
+                    else:
+                        line[field] = int(line[field])
             for field in ['AvgImpressionPosition', 'AvgClickPosition', 'AvgTrafficVolume']:
                 if line.get(field, False):
                     if line[field].find("-") != -1:
