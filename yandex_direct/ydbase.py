@@ -415,7 +415,7 @@ class YandexDirectBase:
             self.headers = {"Authorization": "Bearer " + ENVI[f'PYSEA_YD_{account.upper()}_TOKEN'], "Accept-Language": "ru", }
         # переменные настраивающие кеширование запросов к API
         self.directory = directory
-        self.dump_file_prefix = dump_file_prefix
+        self.dump_file_prefix = f"{dump_file_prefix}_{self.selected_account_name}"
         self.cache = cache
 
         # переменные устанавливают постраничные запросы к API
