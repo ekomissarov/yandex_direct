@@ -408,8 +408,10 @@ class YandexDirectBase:
         'v4live': "https://api.direct.yandex.ru/live/v4/json/",
     }
 
-    def __init__(self, directory="./", dump_file_prefix="fooooo", cache=True):
+    def __init__(self, directory="./", dump_file_prefix="fooooo", cache=True, account="default"):
         self.headers = {"Authorization": "Bearer " + ENVI['PYSEA_YD_TOKEN'], "Accept-Language": "ru",}
+        if account != "default":
+            self.headers = {"Authorization": "Bearer " + ENVI[f'PYSEA_YD_{account.upper()}_TOKEN'], "Accept-Language": "ru", }
         # переменные настраивающие кеширование запросов к API
         self.directory = directory
         self.dump_file_prefix = dump_file_prefix
