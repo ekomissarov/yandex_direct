@@ -9,10 +9,10 @@ logger = constants.logging.getLogger(__name__)
 
 
 class YCampaigns(ydbase.YandexDirectBase):
-    def __init__(self, directory=None, dump_file_prefix="ycmpg", cache=False):
+    def __init__(self, directory=None, dump_file_prefix="ycmpg", cache=False, account="default"):
         if directory is None:
             directory = f"{ENVI['MAIN_PYSEA_DIR']}alldata/cache"
-        super(YCampaigns, self).__init__(directory=directory, dump_file_prefix=dump_file_prefix, cache=cache)
+        super(YCampaigns, self).__init__(directory=directory, dump_file_prefix=dump_file_prefix, cache=cache, account="default")
         self.data = self.__get_campaigns()
         self.ids_enabled = {i['Id'] for i in self.data if i['State'] == 'ON'}
 
@@ -104,10 +104,10 @@ class YCampaigns(ydbase.YandexDirectBase):
 
 
 class YGroups(ydbase.YandexDirectBase):
-    def __init__(self, campaign_ids, directory=None, dump_file_prefix="ygroups", cache=False):
+    def __init__(self, campaign_ids, directory=None, dump_file_prefix="ygroups", cache=False, account="default"):
         if directory is None:
             directory = f"{ENVI['MAIN_PYSEA_DIR']}alldata/cache"
-        super(YGroups, self).__init__(directory=directory, dump_file_prefix=dump_file_prefix, cache=cache)
+        super(YGroups, self).__init__(directory=directory, dump_file_prefix=dump_file_prefix, cache=cache, account="default")
 
         self.campaign_ids = campaign_ids
         self.data = self.__get_adgroups(campaign_ids)
