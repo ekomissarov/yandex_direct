@@ -12,7 +12,7 @@ class YCampaigns(ydbase.YandexDirectBase):
     def __init__(self, directory=None, dump_file_prefix="ycmpg", cache=False, account="default"):
         if directory is None:
             directory = f"{ENVI['MAIN_PYSEA_DIR']}alldata/cache"
-        super(YCampaigns, self).__init__(directory=directory, dump_file_prefix=dump_file_prefix, cache=cache, account="default")
+        super(YCampaigns, self).__init__(directory=directory, dump_file_prefix=dump_file_prefix, cache=cache, account=account)
         self.data = self.__get_campaigns()
         self.ids_enabled = {i['Id'] for i in self.data if i['State'] == 'ON'}
 
@@ -163,7 +163,7 @@ class YGroups(ydbase.YandexDirectBase):
 
 
 if __name__ == '__main__':
-    yc = YCampaigns(account='default')
+    yc = YCampaigns(account='mg-cian')
     ids = yc.search_enabled("_msk_brand_cian")
     yg = YGroups(ids)
     print(yg.search())
