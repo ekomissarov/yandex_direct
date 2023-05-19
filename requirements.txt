@@ -1,5 +1,5 @@
-git+ssh://git@bitbucket.org/cianmedia/common_constants.git@master#egg=pysea-common-constants
-git+ssh://git@bitbucket.org/cianmedia/google_analytics.git@master#egg=pysea-google-analytics
+git+https://github.com/ekomissarov/common_constants.git@main#egg=pysea-common-constants
+git+https://github.com/ekomissarov/google_analytics.git@main#egg=pysea-google-analytics
 certifi==2020.6.20
 chardet==3.0.4
 curlify==2.2.1

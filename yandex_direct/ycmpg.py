@@ -163,7 +163,7 @@ class YGroups(ydbase.YandexDirectBase):
 
 
 if __name__ == '__main__':
-    yc = YCampaigns()
+    yc = YCampaigns(account='default')
     ids = yc.search_enabled("_msk_brand_cian")
     yg = YGroups(ids)
     print(yg.search())
