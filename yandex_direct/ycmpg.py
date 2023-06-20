@@ -163,8 +163,8 @@ class YGroups(ydbase.YandexDirectBase):
 
 
 if __name__ == '__main__':
-    yc = YCampaigns(account='mg-cian')
-    ids = yc.search_enabled("_msk_brand_cian")
+    yc = YCampaigns(account='')
+    ids = yc.search_enabled("")
     yg = YGroups(ids)
     print(yg.search())
     print("QKRQ!")
