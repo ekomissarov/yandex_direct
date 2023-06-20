@@ -409,7 +409,7 @@ class YandexDirectBase:
     }
 
     def __init__(self, directory="./", dump_file_prefix="fooooo", cache=True, account="default", login="default"):
-        self.selected_account_name = account
+        self.selected_account_name = account if login=="default" else login
         self.headers = {"Authorization": "Bearer " + ENVI['PYSEA_YD_TOKEN'], "Accept-Language": "ru",}
         if account != "default":
             self.headers = {"Authorization": "Bearer " + ENVI[f'PYSEA_YD_{account.upper()}_TOKEN'], "Accept-Language": "ru", }
@@ -430,9 +430,11 @@ class YandexDirectBase:
     def cache_disabled(self):
         self.cache = False
 
-    def select_account(self, account_name):
+    def select_account(self, account_name, login="default"):
         self.headers = {"Authorization": "Bearer " + ENVI[f'PYSEA_YD_{account_name.upper()}_TOKEN'], "Accept-Language": "ru", }
-        self.selected_account_name = account_name
+        if login != "default":
+            self.headers.update({"Client-Login": login})
+        self.selected_account_name = account_name if login=="default" else login
         self.dump_file_prefix = f"{self.dump_file_prefix}_{self.selected_account_name}"
 
         return self
