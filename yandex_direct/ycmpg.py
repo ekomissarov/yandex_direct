@@ -107,7 +107,7 @@ class YGroups(ydbase.YandexDirectBase):
     def __init__(self, campaign_ids, directory=None, dump_file_prefix="ygroups", cache=False, account="default"):
         if directory is None:
             directory = f"{ENVI['MAIN_PYSEA_DIR']}alldata/cache"
-        super(YGroups, self).__init__(directory=directory, dump_file_prefix=dump_file_prefix, cache=cache, account="default")
+        super(YGroups, self).__init__(directory=directory, dump_file_prefix=dump_file_prefix, cache=cache, account=account)
 
         self.campaign_ids = campaign_ids
         self.data = self.__get_adgroups(campaign_ids)
