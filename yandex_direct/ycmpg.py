@@ -43,9 +43,9 @@ class YCampaigns(ydbase.YandexDirectBase):
                                 "States": ['ON', 'SUSPENDED', 'ENDED']
                             },
                             "FieldNames": ['Id', 'Name', 'State', 'DailyBudget'],
-                            "TextCampaignFieldNames": ["BiddingStrategy", "PriorityGoals", ],
-                            "DynamicTextCampaignFieldNames": ["BiddingStrategy", "PriorityGoals", ],
-                            "SmartCampaignFieldNames": ["BiddingStrategy", "PriorityGoals", ],
+                            "TextCampaignFieldNames": ["BiddingStrategy", "PriorityGoals", "PackageBiddingStrategy", ],
+                            "DynamicTextCampaignFieldNames": ["BiddingStrategy", "PriorityGoals", "PackageBiddingStrategy", ],
+                            "SmartCampaignFieldNames": ["BiddingStrategy", "PriorityGoals", "PackageBiddingStrategy", ],
                             "CpmBannerCampaignFieldNames": ["BiddingStrategy"],
                             "Page": {"Limit": self.limit_by, "Offset": self.offset}
                            }
